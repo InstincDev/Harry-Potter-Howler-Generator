@@ -18,4 +18,5 @@ function yellAt(event){
     const lname = document.querySelector(".lname").value;
 
     document.querySelector(".name").innerText = `${fname} ${mname} ${lname}`;
+   document.querySelector('form').reset(); 
 }

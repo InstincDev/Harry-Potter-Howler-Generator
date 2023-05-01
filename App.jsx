@@ -20,20 +20,15 @@ function mollyWeasley(){
 }
 
 function App(){
-    const [userName, setUserName] = useState("")
-
+    const [firstName, setFirstName] = useState("")
+    const [middleName, setMiddleName] = useState("")
+    const [lastName, setLastName] = useState("")
+    
  
     const handleSubmit = e =>{
         e.preventDefault()
-        
-        const first = e.target.First_Name.value;
-        const middle = e.target.Middle_Name.value;
-        const last = e.target.Last_Name.value;
-
-        setUserName(`${first} ${middle} ${last}`)
-
        
-             
+             mollyWeasley()
     }
    
     function fullName(){
@@ -43,15 +38,15 @@ function App(){
         <div>
             <h1 className='title'>HP Howler Generator</h1>
             <form onSubmit={handleSubmit}>
-                <NameInput name= {"First_Name"} fullName={fullName}/>
-                <NameInput name= {"Middle_Name"}/>
-                <NameInput name= {"Last_Name"}/>
+                <NameInput name= {"First_Name"} value= {firstName} setValue={setFirstName}/>
+                <NameInput name= {"Middle_Name"} value= {middleName} setValue={setMiddleName}/>
+                <NameInput name= {"Last_Name"} value= {lastName} setValue={setLastName}/>
                 <button type="submit" id="yell" value="yell">Yell</button>
             </form>
             
 
             <section className="placeForName hidden">
-                <h1 className="name">{userName}</h1>
+                <h1 className="name">{`${firstName} ${middleName} ${lastName}`}</h1>
 
                 <p>HOW DARE YOU STEAL THAT CAR! I AM ABSOLUTELY DISGUSTED! YOUR FATHER'S NOW FACING AN INQUIRY AT WORK AND IT'S ENTIRELY YOUR FAULT! IF YOU PUT ANOTHER TOE OUT OF LINE WE'LL BRING YOU STRAIGHT HOME!</p>
                 <p>Oh, and <span>InstincDev</span> dear, congratulations on making this Howler. Your father and I are so proud.</p>

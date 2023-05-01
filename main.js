@@ -22,12 +22,12 @@
 // }
 
 const synth = window.speechSynthesis;
-document.getElementById("yell").addEventListener('click', mollyWeasley)
+// document.getElementById("yell").addEventListener('click', mollyWeasley)
 
 function mollyWeasley(){
-    let fname = document.querySelector('.fname').value;
-    let mname = document.querySelector('.mname').value;
-    let lname = document.querySelector('.lname').value;
+    let fname = document.querySelector("First name").value;
+    let mname = document.querySelector("Middle Name").value;
+    let lname = document.querySelector("Last Name").value;
 
     document.querySelector('.placeForName').classList.toggle('hidden');
     document.querySelector('body').style.backgroundColor = '#222f5b'
